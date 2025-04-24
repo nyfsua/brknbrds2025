@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>brknbrds – lagos</title>
+
+            <meta charset="utf-8"/>
+            <meta content="propagating skateboarding in africa." name="description"/>
+            <meta content="brknbrds lagos." property="og:title"/>
+            <meta content="propagating skateboarding in africa." property="og:description"/>
+            <meta content="brknbrds lagos." property="twitter:title"/>
+            <meta content="propagating skateboarding in africa." property="twitter:description"/>
+            <meta property="og:type" content="website"/>
+            <meta content="summary_large_image" name="twitter:card"/>
+            <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+            <!-- Skelet CSS -->
+            <link rel="stylesheet" href="src/skelet-master/css/skelet.css" />
+            <link rel="stylesheet" href="src/skelet-master/css/skelet-tooltips.css" />
+            <link rel="stylesheet" href="src/skelet-master/css/app.css" />
+
+            <!-- Skelet JS -->
+            <script src="src/skelet-master/js/modules.js" defer></script>
+            <script src="src/skelet-master/js/app.js" defer></script>
+
+            <!-- sfyn custom -->
+            <script src="src/main.js" defer></script>
+            <script src="src/skelet-master/js/modules.js" defer></script>
+
+            <link rel="stylesheet" href="src/main.css" />
+            
+            <link data-n-head="ssr" rel="icon" type="image/x-icon" href="src/img/favicon.png">
+
+        </head>
+
+        <body>
+
+            <div class="navbar" fs="14px">
+
+                <search-engine></search-engine>
+                <section id="mobile-menu"></section>
+
+                <style type="text/css">
+                    
+                    :root {
+                        --headerHeight: 4rem;
+                        --headerPadding: 0 1.5rem;
+                        --headerBg: #ffffff;
+                        --headerBorder: #ffffff;
+                        --linkColor: var(--headerColor);
+                        --linkHover: var(--headerColor);
+                        --logoImageSize: 25px;
+                        --logoAlign: center;
+                        --navAlign: flex-start;
+                        --navDropdownAlign: 0;
+                        --buttonPadding: 1.5rem;
+                    }
+                    :root{ 
+                        --headerPosition:fixed;
+                        --logoFontFamily:'Eurostile',sans-serif;
+                        --logoFontWeight:500;
+                        --logoFontStyle:normal 
+                    }
+                    
+                    @media (min-width:778px) {
+                        .main-header header a.no-style, .main-header header .dm.lv1 summary {
+                            padding-inline: calc(1.5 * var(--buttonPadding))!important 
+                        }
+                        .main-header header :where(a.no-style,.dm.lv1 summary):hover,
+                        .main-header header details[open] > summary { 
+                            outline: 1px solid var(--globalBorderColor); 
+                            outline-offset: -1rem; 
+                            border-radius: calc(1rem + var(--radius)) 
+                        }
+                    }
+
+                    [class*="group-header"]:not(.main-header) { display: none }
+                        :is(.main-header #header, .main-header #header details.dm > details-menu) {
+                            --headerColor: #ffffff;
+                            --linkColor: var(--headerColor);
+                            --linkHover: var(--headerColor);
+                            --headerBorder: #ffffff;--headerBg: transparent;
+                        }
+                </style>
+                
+                <div class="nav_container">
+
+                    <x-grid id="header-grid" class="header-grid" columns="3" columns-s="2" style="pointer-events: auto;">
+
+                        <x-cell class="nav-item" style="--navAlign: flex-start; --navDropdownAlign: 0; pointer-events: auto;">
+
+                            <nav role="navigation" class="nav_menu" aria-label="Menu" style="pointer-events: auto;">
+
+                                <ul class="nav_list" style="pointer-events: auto;">
+
+                                    <li class="nav-list-item">
+                        
+                                        <a href="#home" class="h3">
+                                            Home
+                                        </a>
+
+                                        <div class="underline Home"></div>
+                            
+                                    </li>
+
+                                    <li class="nav-list-item">
+                        
+                                        <a href="#capsules" class="h3">
+                                            Capsules
+                                        </a>
+
+                                        <div class="underline Capsules"></div>
+                            
+                                    </li>
+
+                                    <li class="nav-list-item">
+                        
+                                        <a href="#sessions" class="h3">
+                                            Sessions
+                                        </a>
+
+                                        <div class="underline Sessions"></div>
+                            
+                                    </li>
+
+                                    <li class="nav-list-item">
+                        
+                                        <a href="#about" class="h3">
+                                            About
+                                        </a>
+
+                                        <div class="underline About"></div>
+                            
+                                    </li>
+
+                                    <li class="nav-list-item" style="pointer-events: auto;">
+
+                                        <a href="https://bvrdyx.netlify.app/" class="h3" target="_blank" rel="noopener noreferrer" style="pointer-events: auto;">
+                                            Lab
+                                        </a>
+
+                                        <div class="underline Lab"></div>
+
+                                    </li>
+
+                                </ul>
+            
+                            </nav>
+
+                        </x-cell>
+
+                        <!-- Hamburger toggle – hidden by default -->
+                        <button class="hamburger-toggle no-style" aria-label="Open menu">
+                            <a class="h3"> Menu </a>
+                        </button>
+  
+                        <x-cell class="logo_1">
+
+                            <x-cell class="nav-logo" order-s="1" href="#" class="brand">  
+
+                                <style>:root{--logoImageSize:25px;--logoAlign:center}</style>
+                                <a href="/" class="no-style">
+                                    <img src="src/img/nannuflay_logo.svg" alt="ⴱⵔⴽⵏⴱⵕⴷⵙ" height="40" class="logo_white">
+                                </a>
+                            </x-cell>
+
+                        </x-cell>
+
+                        <x-cell class="nav-item-left" style="--navAlign: flex-start; --navDropdownAlign: 0; pointer-events: auto;">
+
+                            <ul class="shop_div">
+
+                                <li class="nav-item-shop">
+                        
+                                    <a href="#search"  id="search-tab" class="h3" onclick="event.preventDefault()">
+                                        Search
+                                    </a>
+
+                                    <div class="underline Search"></div>
+                        
+                                </li>
+        
+                                <li class="nav-item-shop">
+                        
+                                    <a href="#cart" id="cart-page" class="h3">
+                                        Cart
+                                    </a>
+
+                                    <div class="underline Cart"></div>
+                        
+                                </li>
+        
+                            </ul>
+
+                        </x-cell>
+
+                    </x-grid>
+
+                </div>
+
+                <div class="bottom_stroke"></div>
+
+            </div>
+
+            <div id="home" class="section_1">
+
+                    <div class="hero-visual">
+    
+                        <div class="burst-image">
+
+                            <picture class="hero-visual svh100-calc">
+                                <!-- When viewport ≤429px, load the 2nd GIF -->
+                                <source media="(max-width: 429px)" srcset="src/img/Heatwave_2.gif" />
+                              
+                                <!-- Otherwise (and as a fallback) load the original -->
+                                <img src="src/img/Heatwave_1.gif" alt="Heatwave Visual" class="responsive-image" loading="lazy" sizes="100vw" />
+
+                            </picture>
+                              
+                            
+                        </div>
+
+                    </div>
+                        
+            </div>
+
+            <!-- PRODUCTS 3‑COLUMN GRID -->
+            <section id="products" class="products-grid">
+                
+                <div class="product-card" data-id="gxng">
+                    <img src="src/img/products/gxng card.png" alt="Gxng">
+                </div>
+                
+                <div class="product-card" data-id="nxstalgia">
+                    <img src="src/img/products/nxstalgia card.png" alt="Nxstalgia">
+                </div>
+
+                <div class="product-card" data-id="giran">
+                    <img src="src/img/products/giran card.png" alt="Giran">
+                </div>
+
+                <div class="product-card" data-id="steeze01">
+                    <img src="src/img/products/steeze01 card.png" alt="Steeze01">
+                </div>
+
+                <div class="product-card" data-id="legacy">
+                    <img src="src/img/products/legacy card.png" alt="Legacy">
+                </div>
+
+                <div class="product-card" data-id="antislam01">
+                    <img src="src/img/products/antislam card.png" alt="Antislam01">
+                </div>
+                
+            </section>
+  
+            <!-- PRODUCT DETAILS MODAL -->
+             
+            <div id="product-modal" class="modal">
+                <div class="modal-content">
+
+                    <img class="modal-image" src="" alt="">
+                    <h2 class="modal-title"></h2>
+                    <p class="modal-desc"></p>
+                    
+                </div>
+            </div>
+  
+
+            <div id="capsules" class="section_3">
+
+                    <div class="takeoff22">
+
+                        <div class="capsule_card_image">
+
+                            <img src="src/img/capsules/takeoff22.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
+
+                        </div>
+
+                    </div>
+
+                    <div class="cfa">
+
+                        <div class="capsule_card_image">
+
+                            <img src="src/img/capsules/cfa.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
+
+                        </div>
+
+                    </div>
+
+                    <div class="no_airbags">
+
+                        <div class="capsule_card_image">
+
+                            <img src="src/img/capsules/no airbags.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
+
+                        </div>
+
+                    </div>
+
+                    <div class="nannuflay">
+
+                        <div class="capsule_card_image">
+
+                            <img src="src/img/capsules/nannufláy.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
+
+                        </div>
+
+                    </div>
+                
+            </div>
+
+            <div id="about" class="section_4">
+
+                    <div id="about_text" class="h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean condimentum dictum porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris congue ullamcorper egestas. Nunc vitae metus ornare neque dapibus aliquet eu consectetur nunc. Donec nec felis turpis. Curabitur euismod tempus felis quis finibus. Sed lobortis varius quam in posuere. Suspendisse maximus facilisis euismod. Aliquam nec aliquam tortor. Phasellus at lorem libero.</div>
+                    <img class="logo" alt="" src="src/img/nannuflay_logo_black.svg" loading="lazy">
+
+            </div>
+            
+            <!--
+            <div id="sessions" class="section_5">
+
+                    <div class="sessions_posters">
+
+                        <img class="poster" alt="" src="src/img/posters/regular sessions.png">
+
+                    </div>
+                
+            </div>
+            -->
+
+            <footer class="footer">
+
+                <div class="contact">
+
+                    <div class="footer_text">
+
+                        <a id="brknbrds-by-bvrdyx" class="h1">
+                            BRKNBRDS BY BVRDYX
+                        </a>
+
+                    </div>
+
+                    <div class="footer_text">
+
+                        <a id="address" class="h1">
+                            75-79 Acme Road, Ikeja – Lagos, Nigeria
+                        </a>
+
+                    </div>
+
+                    <div class="footer_text" href="mailto:info@spr-nt.com?subject=let%20us%20work!">
+
+                        <a id="email" class="h1">
+                            info@bvrdyx.com
+                        </a>
+
+                    </div>
+                    
+                    <div class="socials" href="https://www.instagram.com/bvrd.yx/">
+
+                        <a id="instagram" class="h1">
+                            INSTAGRAM
+                        </a>
+
+                    </div>
+
+                    <div class="socials" href="https://www.twitter.com/bvrdyx/">
+
+                        <a id="twitter" class="h1">
+                            TWITTER
+                        </a>
+
+                    </div>
+
+                    <div class="socials" href="https://www.youtube.com/bvrdyx/">
+
+                        <a id="youtube" class="h1">
+                            YOUTUBE
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="logo">
+
+                    <img class="footer-banner" alt="" src="src/img/nannuflay_logo_dark.svg" loading="lazy">
+
+                </div>
+
+                <div class="disclaimer">
+
+                    <a class="h1">
+                        © 2025 90642 Inc. All rights reserved.
+                    </a>
+
+                </div>
+
+            </footer>
+
+        </body>
+
+    </html>
+

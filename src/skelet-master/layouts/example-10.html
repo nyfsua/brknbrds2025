@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="Skelet." property="Sēlekkt. Studio" content="https://selekkt.dk/skelet/v3/">
+
+    <title>Example 10</title>
+    <meta name="description" content="Built with Skelet.css - example 10">
+    <meta name="author" content="Sēlekkt. Studio">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- Facebook OG Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:secure_url" content="">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    
+    <link rel="canonical" href="">
+
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="img/touch.png">
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Selekkt/skelet@next/css/skelet.css">
+
+<style>
+x-scroll { 
+    timeline-scope: --carousel;
+    max-width: 100vw;
+
+        .scroll-snap { 
+            --scrollChildHeight: 600px;
+            scroll-timeline: --carousel inline;
+            
+        }
+
+        .card img { max-width: 100%; height: 100%; }
+
+        button[data-next] { animation: auto next ease forwards; animation-timeline: --carousel }
+        button[data-previous] { animation: auto prev ease forwards; animation-timeline: --carousel }    
+}
+
+@keyframes prev { from { visibility: hidden } }
+@keyframes next { to { visibility: hidden } }
+</style>
+
+</head>
+<body dark-mode>
+<div id="app">
+    <header x-grid columns="2" style="padding: var(--margin)">
+        <h1 style="--hMargin:0">Skelet.css</h1>
+        <x-cell>.scroll-snap + web component.</x-cell>
+    </header>
+
+    <main class="center-axyz">
+        <h2>Skelet version</h2>
+        <x-scroll>
+            <ul class="scroll-snap no-style">
+                <li class="card">
+                    <img src="https://placehold.co/950x1397/711DB0/FFF/?text=Skelet.css" alt="">
+                </li>
+
+                <li class="card">
+                    <img src="https://placehold.co/950x1397/C21292/FFF/?text=Skelet.css" alt="">
+                </li>
+
+                <li class="card">
+                    <img src="https://placehold.co/950x1397/EF4040/FFF/?text=Skelet.css" alt="">
+                </li>
+
+                <li class="card">
+                    <img src="https://placehold.co/950x1397/FFA732/000/?text=Skelet.css" alt="">
+                </li>
+            </ul>
+
+            <scroll-nav>
+                <button data-previous aria-label="Previous">Prev</button> 
+                <button data-next aria-label="Next">Next</button>
+            </scroll-nav>
+        </x-scroll>
+
+        <hr>
+
+        <!-- Scroller 2 -->
+        <style>
+            x-scroll.customized {
+                --hMargin: 0;
+
+                position: relative;
+                max-width: 95%;
+                overflow: hidden;
+                margin: var(--margin) 2%;
+
+                scroll-nav { display: block; padding-block: var(--padding) }
+                scroll-pagination { display: block; margin-inline: auto;z-index: 9;}
+                .scroll-snap { --scrollMargin: .3rem; border-radius: 2rem }
+
+                .card {
+                    &.dark { color: black }
+                    .meta { margin: var(--margin) }
+                    img { max-height: 500px }
+                }
+
+            }
+        </style>
+        <x-scroll markers="true" class="customized">
+            <scroll-nav>
+                <x-grid columns="2" ai="center">
+                    <x-cell>
+                        <h2>Customized version</h2>
+                    </x-cell>
+                    <x-cell js="end">
+                        <button data-previous aria-label="Previous" class="is-white is-pill has-icon">
+                            <i><svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg></i>
+                        </button> 
+                        <button data-next aria-label="Next" class="is-white is-pill has-icon">
+                            <i><svg viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg></i>
+                        </button>
+                    </x-cell>
+                </x-grid>
+            </scroll-nav>
+
+            <scroll-pagination></scroll-pagination>
+
+            <ul class="scroll-snap align-start no-scrollbars no-style inside">
+                <li class="card">
+                    <x-grid columns="stack">
+                        <x-flex direction="column" class="meta">
+                            <h2>Skelet.css</h2>
+                            <span style="margin-block-start: auto">This is card</span>
+                        </x-flex>
+                        <x-cell class="media">
+                            <img src="https://placehold.co/950x950/371B58/371B58/?text=Skelet.css" alt="">
+                        </x-cell>
+                    </x-grid>
+                </li>
+
+                <li class="card">
+                    <x-grid columns="stack">
+                        <x-flex direction="column" class="meta">
+                            <h2>Skelet.css</h2>
+                            <span style="margin-block-start: auto">Card two</span>
+                        </x-flex>
+                        <x-cell class="media">
+                            <img src="https://placehold.co/950x950/371B58/371B58/?text=Skelet.css" alt="">
+                        </x-cell>
+                    </x-grid>
+                </li>
+
+                <li class="card dark">
+                    <x-grid columns="stack">
+                        <x-flex direction="column" class="meta">
+                            <h2>Skelet.css</h2>
+                            <span style="margin-block-start: auto">Card two</span>
+                        </x-flex>
+                        <x-cell class="media">
+                            <img src="https://placehold.co/950x950/FFF/FFF/?text=Skelet.css" alt="">
+                        </x-cell>
+                    </x-grid>
+                </li>
+
+                <li class="card"><img src="https://placehold.co/950x950/5B4B8A/000/?text=Skelet.css" alt=""></li>
+                <li class="card"><img src="https://placehold.co/950x950/7858A6/000/?text=Skelet.css" alt=""></li>
+                <li class="card"><img src="https://placehold.co/950x950/2E0249/FFF/?text=Skelet.css" alt=""></li>
+                <li class="card"><img src="https://placehold.co/950x950/570A57/FFF/?text=Skelet.css" alt=""></li>
+                <li class="card"><img src="https://placehold.co/950x950/A91079/FFF/?text=Skelet.css" alt=""></li>
+            </ul>
+        </x-scroll>
+
+    </main>
+
+</div>
+
+<script type="module">
+// This Web Component makes the scroll-snap move when the buttons are clicked.
+// Since it is a web component you can have infinite instances of it without having to use IDs
+export default class xScroll extends HTMLElement {
+    constructor() {
+        super();
+
+        this.scroller = this.querySelector('.scroll-snap');
+        this.buttonPrev = this.querySelector('button[data-previous]');
+        this.buttonNext = this.querySelector('button[data-next]');
+    }
+    
+    connectedCallback() {
+        if (this.buttonPrev) this.buttonPrev.addEventListener('click', () => this.scrollBy(-1));
+        if (this.buttonNext) this.buttonNext.addEventListener('click', () => this.scrollBy(1));
+
+        // Run createPaginationMarkers only if markers attribute is "true"
+        if (this.getAttribute('markers') === 'true') this.createPaginationMarkers();
+    }
+    
+    scrollBy(direction) {
+        if (this.scroller) {
+            const itemSize = this.scroller.firstElementChild ? this.scroller.firstElementChild.offsetWidth : 0;
+            this.scroller.scrollBy({ left: itemSize * direction, behavior: 'smooth' });
+        }
+    }
+
+    createPaginationMarkers() {
+        const items = this.scroller ? this.scroller.children : [];
+        // Check if a pagination container already exists
+        let pagination = this.querySelector('scroll-pagination');
+        // If it doesn't exist, create it
+        if (!pagination) {
+            pagination = document.createElement('scroll-pagination');
+            this.appendChild(pagination); // Append only if it was necessary to create a new one
+        }
+
+        Array.from(items).forEach((item, index) => {
+            const marker = document.createElement('button');
+            marker.type = 'button';
+            marker.classList = 'is-custom is-circle has-icon';
+            marker.innerHTML = index + 1; // Or use any other content or indicator
+            marker.addEventListener('click', () => {
+                this.scroller.scrollTo({
+                    left: item.offsetLeft,
+                    behavior: 'smooth'
+                });
+            });
+            pagination.appendChild(marker);
+        });
+    }
+}
+
+if (!customElements.get('x-scroll')) customElements.define('x-scroll', xScroll);
+</script>
+
+</body>
+</html>
