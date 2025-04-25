@@ -1,8 +1,14 @@
 // modules.js
 
-// custom code by sfyn
+// custom code by sfyn (and chatgpt)
 
-// src/skelet-master/js/modules.js
+const searchToggle = document.getElementById('search-toggle');
+const searchInput = document.getElementById('search-input');
+
+searchToggle.addEventListener('click', () => {
+  const query = searchInput.value;
+  console.log("Searching for:", query); 
+});
 
 class SearchEngine extends HTMLElement {
     constructor() {
@@ -55,7 +61,7 @@ class SearchEngine extends HTMLElement {
             opacity: 1;
           }
         </style>
-        <button class="search-toggle" aria-label="search">🔍</button>
+
         <form action="/search" method="GET" class="search-form">
           <input 
             type="search" 

@@ -36,7 +36,6 @@
 
             <div class="navbar" fs="14px">
 
-                <search-engine></search-engine>
                 <section id="mobile-menu"></section>
 
                 <style type="text/css">
@@ -125,7 +124,7 @@
                                     <li class="nav-list-item">
                         
                                         <a href="#about" class="h3">
-                                            About
+                                            About Us
                                         </a>
 
                                         <div class="underline About"></div>
@@ -170,10 +169,26 @@
                             <ul class="shop_div">
 
                                 <li class="nav-item-shop">
-                        
-                                    <a href="#search"  id="search-tab" class="h3" onclick="event.preventDefault()">
+
+                                    <a href="#search"  id="search-toggle" class="search-toggle" onclick="event.preventDefault()">
                                         Search
                                     </a>
+                                    
+                                    <style>
+                                        .search-toggle{
+                                          font-size: 14px !important; 
+                                          color: var(--white);
+                                          text-align: center;
+                                          margin: 0;
+                                          font-weight: 200;
+                                          text-decoration: none;
+                                          padding: var(--navPadding) !important;
+                                          font-family: 'Eurostile', sans-serif !important;
+                                        } 
+                                      </style>
+                                
+
+                                <search-engine></search-engine>
 
                                     <div class="underline Search"></div>
                         

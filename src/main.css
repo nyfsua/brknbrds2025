@@ -145,7 +145,8 @@
       height: 48px !important;
       justify-content: center;
       position: relative;
-      padding-left: 45% !important;
+      padding-left: 33% !important;
+      padding-right: 33% !important;
     }
 
     .logo_1 .nav_logo {
@@ -255,6 +256,7 @@
      font-weight: 200;
      text-decoration: none;
      padding: var(--navPadding) !important;
+     font-family: 'Eurostile', sans-serif !important;
    }
    
    
