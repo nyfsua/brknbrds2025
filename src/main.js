@@ -96,3 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+
+addBtn.addEventListener('click', () => {
+  alert(`Added "${titleEl.textContent}" to cart!`);
+  modal.classList.remove('active');
+});
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+  }
+});
+
