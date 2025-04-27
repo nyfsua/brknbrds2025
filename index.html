@@ -1,6 +1,7 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
+
             <title>brknbrds – lagos</title>
 
             <meta charset="utf-8"/>
@@ -11,24 +12,10 @@
             <meta content="propagating skateboarding in africa." property="twitter:description"/>
             <meta property="og:type" content="website"/>
             <meta content="summary_large_image" name="twitter:card"/>
-            <meta content="width=device-width, initial-scale=1" name="viewport"/>
-
-            <!-- Skelet CSS -->
-            <link rel="stylesheet" href="src/skelet-master/css/skelet.css" />
-            <link rel="stylesheet" href="src/skelet-master/css/skelet-tooltips.css" />
-            <link rel="stylesheet" href="src/skelet-master/css/app.css" />
-
-            <!-- Skelet JS -->
-            <script src="src/skelet-master/js/modules.js" defer></script>
-            <script src="src/skelet-master/js/app.js" defer></script>
-
-            <!-- sfyn custom -->
-            <script src="src/main.js" defer></script>
-            <script src="src/skelet-master/js/modules.js" defer></script>
-
-            <link rel="stylesheet" href="src/main.css" />
+            <meta content="width=device-width, initial-scale=1" name="viewport"/>            
             
             <link data-n-head="ssr" rel="icon" type="image/x-icon" href="src/img/favicon.png">
+            <link rel="stylesheet" href="index.css">
 
         </head>
 
@@ -37,49 +24,6 @@
             <div class="navbar" fs="14px">
 
                 <section id="mobile-menu"></section>
-
-                <style type="text/css">
-                    
-                    :root {
-                        --headerHeight: 4rem;
-                        --headerPadding: 0 1.5rem;
-                        --headerBg: #ffffff;
-                        --headerBorder: #ffffff;
-                        --linkColor: var(--headerColor);
-                        --linkHover: var(--headerColor);
-                        --logoImageSize: 25px;
-                        --logoAlign: center;
-                        --navAlign: flex-start;
-                        --navDropdownAlign: 0;
-                        --buttonPadding: 1.5rem;
-                    }
-                    :root{ 
-                        --headerPosition:fixed;
-                        --logoFontFamily:'Eurostile',sans-serif;
-                        --logoFontWeight:500;
-                        --logoFontStyle:normal 
-                    }
-                    
-                    @media (min-width:778px) {
-                        .main-header header a.no-style, .main-header header .dm.lv1 summary {
-                            padding-inline: calc(1.5 * var(--buttonPadding))!important 
-                        }
-                        .main-header header :where(a.no-style,.dm.lv1 summary):hover,
-                        .main-header header details[open] > summary { 
-                            outline: 1px solid var(--globalBorderColor); 
-                            outline-offset: -1rem; 
-                            border-radius: calc(1rem + var(--radius)) 
-                        }
-                    }
-
-                    [class*="group-header"]:not(.main-header) { display: none }
-                        :is(.main-header #header, .main-header #header details.dm > details-menu) {
-                            --headerColor: #ffffff;
-                            --linkColor: var(--headerColor);
-                            --linkHover: var(--headerColor);
-                            --headerBorder: #ffffff;--headerBg: transparent;
-                        }
-                </style>
                 
                 <div class="nav_container">
 
@@ -169,30 +113,27 @@
                             <ul class="shop_div">
 
                                 <li class="nav-item-shop">
-
-                                    <a href="#search"  id="search-toggle" class="search-toggle" onclick="event.preventDefault()">
+                                    <div class="nav-search">
+                                      <!-- Toggle button -->
+                                      <button type="button" id="search-toggle" class="search-toggle no-style" aria-label="Toggle search" onclick="event.preventDefault()">
                                         Search
-                                    </a>
-                                    
-                                    <style>
-                                        .search-toggle{
-                                          font-size: 14px !important; 
-                                          color: var(--white);
-                                          text-align: center;
-                                          margin: 0;
-                                          font-weight: 200;
-                                          text-decoration: none;
-                                          padding: var(--navPadding) !important;
-                                          font-family: 'Eurostile', sans-serif !important;
-                                        } 
-                                      </style>
-                                
-
-                                <search-engine></search-engine>
-
+                                      </button>
+                                  
+                                      <!-- Hidden by default; slides open when .open is added -->
+                                      <form action="/search" method="GET" class="search-form">
+                                        <input
+                                          type="search"
+                                          name="q"
+                                          class="search-input"
+                                          placeholder="Search…"
+                                          aria-label="Site search"
+                                        />
+                                      </form>
+                                    </div>
+                                  
                                     <div class="underline Search"></div>
-                        
-                                </li>
+                                  </li>
+                                  
         
                                 <li class="nav-item-shop">
                         
@@ -280,49 +221,23 @@
             </div>
   
 
-            <div id="capsules" class="section_3">
+            <section id="capsules" class="capsules-grid no-padding">
+                <div class="capsule-card" data-url="/capsules/takeoff22">
+                  <img src="src/img/capsules/takeoff22.png" alt="Takeoff22">
+                </div>
+                <div class="capsule-card" data-url="/capsules/cfa">
+                  <img src="src/img/capsules/cfa.png" alt="CFA Capsule">
+                </div>
+                <div class="capsule-card" data-url="/capsules/no-airbags">
+                  <img src="src/img/capsules/no airbags.png" alt="No Airbags">
+                </div>
+                <div class="capsule-card" data-url="/capsules/nannuflay">
+                  <img src="src/img/capsules/nannufláy.png" alt="Nannufláy">
+                </div>
+            </section>
+              
 
-                    <div class="takeoff22">
-
-                        <div class="capsule_card_image">
-
-                            <img src="src/img/capsules/takeoff22.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
-
-                        </div>
-
-                    </div>
-
-                    <div class="cfa">
-
-                        <div class="capsule_card_image">
-
-                            <img src="src/img/capsules/cfa.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
-
-                        </div>
-
-                    </div>
-
-                    <div class="no_airbags">
-
-                        <div class="capsule_card_image">
-
-                            <img src="src/img/capsules/no airbags.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
-
-                        </div>
-
-                    </div>
-
-                    <div class="nannuflay">
-
-                        <div class="capsule_card_image">
-
-                            <img src="src/img/capsules/nannufláy.png" srcset="" loading="lazy" sizes="100vw" class="responsive-image">
-
-                        </div>
-
-                    </div>
-                
-            </div>
+              
 
             <div id="about" class="section_4">
 

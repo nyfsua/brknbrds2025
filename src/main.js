@@ -1,3 +1,7 @@
+// main.js
+
+// custom code by sfyn (and chatgpt) 
+
 // mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -113,3 +117,67 @@ modal.addEventListener('click', e => {
   }
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Grab all the toggles
+  document.querySelectorAll('.search-toggle').forEach(toggle => {
+    const navSearch = toggle.closest('.nav-search');
+    const input     = navSearch.querySelector('.search-input');
+
+    // If either is missing, bail out for that instance
+    if (!navSearch || !input) return;
+
+    // Toggle open/closed
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();               // don’t let the document-click listener immediately close it
+      navSearch.classList.toggle('open');
+      if (navSearch.classList.contains('open')) {
+        input.focus();
+      }
+    });
+  });
+
+  // Close when clicking outside any open search
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-search.open').forEach(n => {
+      n.classList.remove('open');
+    });
+  });
+});
+
+// src/main.js
+document.addEventListener('DOMContentLoaded', () => {
+  // ─── Search Toggle ────────────────────────────────────
+  const searchLink = document.getElementById('search-toggle');
+  if (searchLink) {
+    searchLink.addEventListener('click', (e) => {
+      e.preventDefault(); // stop href="#search"
+      const li = searchLink.closest('.nav-item-shop');
+      const input = li.querySelector('.search-input');
+
+      li.classList.toggle('open');
+      if (li.classList.contains('open') && input) {
+        input.focus();
+      }
+    });
+
+    // click outside to close
+    document.addEventListener('click', (e) => {
+      const li = searchLink.closest('.nav-item-shop');
+      if (li.classList.contains('open') && !li.contains(e.target)) {
+        li.classList.remove('open');
+      }
+    });
+  }
+});
+
+
+
+// capsule section js //
+// Capsules click-through
+document.querySelectorAll('.capsule-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const url = card.dataset.url;
+    if (url) window.location.href = url;
+  });
+});
